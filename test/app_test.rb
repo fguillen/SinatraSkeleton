@@ -10,7 +10,7 @@ class SinatraSkeleton::AppTest < MiniTest::Unit::TestCase
   def test_root
     get "/"
     assert last_response.ok?
-    assert_match "Sinatra Skeleton (test)!", last_response.body
+    assert_match "SinatraSkeleton (test)!", last_response.body
   end
 
   def test_other_page

@@ -1,9 +1,9 @@
 development:
-  message: "Sinatra Skeleton (development)"
+  message: "SinatraSkeleton (development)"
 
 test:
-  message: "Sinatra Skeleton (test)"
+  message: "SinatraSkeleton (test)"
 
 production:
-  message: "Sinatra Skeleton (production)"
+  message: "SinatraSkeleton (production)"
 
