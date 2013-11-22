@@ -1,8 +1,3 @@
-require "sinatra/base"
-require "json"
-
-require_relative "../sinatra_skeleton"
-
 module SinatraSkeleton
   class App < Sinatra::Base
     set :sessions, true
@@ -13,7 +8,7 @@ module SinatraSkeleton
     set :public_folder, Proc.new { "#{root}/../../public" }
 
     get "/" do
-      @message = SinatraSkeleton::CONFIG["message"]
+      @message = SinatraSkeleton::APP_CONFIG["message"]
       erb :hello_world
     end
 

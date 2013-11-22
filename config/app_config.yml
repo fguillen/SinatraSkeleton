@@ -1,0 +1,9 @@
+development:
+  message: "Sinatra Skeleton (development)"
+
+test:
+  message: "Sinatra Skeleton (test)"
+
+production:
+  message: "Sinatra Skeleton (production)"
+
