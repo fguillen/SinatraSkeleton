@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "1.9.3"
+ruby "2.0.0"
 
 gem "sinatra"
 gem "json"
@@ -7,4 +7,10 @@ gem "thin"
 gem "rake"
 gem "mocha"
 gem "curb"
-gem "rack-test"
+
+group :development do
+  gem "rack-test"
+  gem "capistrano"
+  gem "capistrano-bundler"
+  gem "capistrano-rbenv", github: "capistrano/rbenv"
+end
