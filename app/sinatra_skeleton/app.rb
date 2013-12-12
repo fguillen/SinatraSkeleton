@@ -16,7 +16,7 @@ module SinatraSkeleton
       Dir.mkdir(log_path) unless File.exist?(log_path)
       log_file = File.new("#{log_path}/#{settings.environment}.log", "a+")
       log_file.sync = true
-      $stdout.reopen(log_file)
+      # $stdout.reopen(log_file) # Reopening STDOUT causes problems with Passenger
       $stderr.reopen(log_file)
     end
 
