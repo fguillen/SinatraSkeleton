@@ -1,7 +1,7 @@
 module SinatraSkeleton
   class App < Sinatra::Base
     configure do
-      set :sessions, true
+      set :sessions, :expire_after => 2592000 unless test?
       set :session_secret, "SinatraSkeleton"
       set :layout => :layout
       set :logging, true
