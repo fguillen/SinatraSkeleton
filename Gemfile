@@ -8,6 +8,8 @@ gem "rake"
 gem "mocha"
 gem "curb"
 gem "rollbar"
+gem "sinatra-activerecord"
+gem "sqlite3"
 
 group :development do
   gem "rack-test"

@@ -1,6 +1,7 @@
 module SinatraSkeleton
   class App < Sinatra::Base
     use Rollbar::Middleware::Sinatra
+    register Sinatra::ActiveRecordExtension
 
     configure do
       set :sessions, :expire_after => 2592000, :key => "SinatraSkeleton" unless test?
@@ -10,6 +11,7 @@ module SinatraSkeleton
       set :root, File.dirname(__FILE__)
       set :views, Proc.new { "#{root}/../../views" }
       set :public_folder, Proc.new { "#{root}/../../public" }
+      set :database_file, "#{root}/../../config/database.yml"
     end
 
     configure :development, :staging, :production do
@@ -33,6 +35,10 @@ module SinatraSkeleton
 
     get "/error" do
       raise "This is a test error"
+    end
+
+    get "/visit" do
+      SinatraSkeleton::Visit.create!(:datestamp => Time.now)
     end
   end
 end

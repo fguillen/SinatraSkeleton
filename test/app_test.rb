@@ -24,4 +24,10 @@ class SinatraSkeleton::AppTest < MiniTest::Unit::TestCase
       get "/error"
     end
   end
+
+  def test_visit
+    count = SinatraSkeleton::Visit.count
+    get "/visit"
+    assert_equal(count + 1, SinatraSkeleton::Visit.count)
+  end
 end
