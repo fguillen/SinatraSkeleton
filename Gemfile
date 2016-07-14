@@ -7,6 +7,7 @@ gem "thin"
 gem "rake"
 gem "mocha"
 gem "curb"
+gem "rollbar"
 
 group :development do
   gem "rack-test"

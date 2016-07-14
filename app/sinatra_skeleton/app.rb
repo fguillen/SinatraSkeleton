@@ -1,5 +1,7 @@
 module SinatraSkeleton
   class App < Sinatra::Base
+    use Rollbar::Middleware::Sinatra
+
     configure do
       set :sessions, :expire_after => 2592000, :key => "SinatraSkeleton" unless test?
       set :session_secret, "SinatraSkeleton"
@@ -27,6 +29,10 @@ module SinatraSkeleton
 
     get "/other_page" do
       erb :other_page
+    end
+
+    get "/error" do
+      raise "This is a test error"
     end
   end
 end
