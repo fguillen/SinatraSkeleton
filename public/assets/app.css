@@ -1,14 +1,10 @@
 /* app.css */
 
 body {
-  background-color: rgb(126, 245, 96);
-  padding-top: 140px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .navbar {
-  padding: 20px;
-}
-
-.navbar h1 {
-  color: white;
+  margin-bottom: 20px;
 }

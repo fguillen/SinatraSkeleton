@@ -1,1 +1,1 @@
-console.log("app.js loading...");
+console.log("Sinatra Skeleton loading...");
